@@ -12,6 +12,7 @@
   var age=21;
   var yesButton = $("#yes");
   var noButton = $("#no");
+  // excellent variables names and code comments!
 
   yesButton.on("click", function(){
     $("div.yes").html("** Welcome!! Let's have fun! Proceed with GAME section **")
@@ -33,7 +34,7 @@
   });
 
 // Card Types
-CardType = {
+CardType = { //use lowercase when using object literals. Uppercase camelcase in JS is usually reserved for constructor functions.
   Hearts: 0,
   Spades: 1,
   Clubs: 2,
@@ -58,13 +59,15 @@ function cardDeck(){
 function shuffle(myDeckOfCards) {
 	var theLength = myDeckOfCards.length - 1; //52 - 1 = 51
 
-        for (i = theLength; i > 0; i--) {
+        for (i = theLength; i > 0; i--) { //remember var after parentheses.
             toSwap = Math.floor(Math.random() * i); // random card's index or id
             tempCard = myDeckOfCards[i]; // currently last card
             myDeckOfCards[i] = myDeckOfCards[toSwap];
             myDeckOfCards[toSwap] = tempCard;
+	    // use var for all of the above variables.
         }
         //console.log("Cards after shuffle: "+cards);
+	// please remove commented out code before submitting in the future.
         //drawCards();
 
 		return myDeckOfCards;
@@ -79,7 +82,7 @@ var playerPoints_low;
 var playerPoints_high;
 var dealerPoints_low;
 var dealerPoints_high;
-
+// you could move these variables to the top of the page to keep all variable declarations together.
 
 
 function init() {
@@ -110,7 +113,7 @@ function calculatePoints(currentPoint, newCardNumber) {
 
 }
 
-
+// please remove empty white space to make your code easier to read (and debug!)
 
 // deal the card
 function cardDeal(){
@@ -141,6 +144,8 @@ function cardDeal(){
 	bjTable.rows[1].cells[dealerSlot++].innerHTML = shuffledDeck[currentCardIndex].number + ' of ' + shuffledDeck[currentCardIndex].type  + ' and the point is ' + dealerPoints_low;
 	currentCardIndex++; // next card
 
+	// can you think of a way to visually represent the cards instead of using text?
+
 
 }; //end of cardDeal
 
@@ -152,6 +157,7 @@ function hitMe() {
 	currentCardIndex++; // next card
 
 	// since you have five slots only, your code will break if you hit more than 3 times with your current implmentation
+	// excellent code comments & pseudo code!
 	// you need a way to check your current point 1 = 1 or 11, 10,j,q,k are all 10, others are as they are`
 	// you need a way to check if you are busted (over 21) or not
 }
@@ -168,6 +174,7 @@ function resetTable(){
 
 
   //
+  // please remove commented out code before submitting in the future.
   // // card deck
   // var full_deck = [];
   // var deck = function() {

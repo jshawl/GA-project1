@@ -34,7 +34,7 @@ body {
   padding: 15px;
   margin: 100px;
   width: 570px;
-  height: 80px;
+  height: 80px; /*Avoid hardcoding heights when possible. What if the text inside the nav can't fit within 80px?*/
   border: 4px solid #665544;
   text-align: center;
   border-radius: 30px;
@@ -73,7 +73,7 @@ img {
 
 img#dealer {
   width:50%;
-  height: 400px;
+  height: 400px; /* could leave this one out, because of the above rule */
   padding: 5px;
 }
 
@@ -154,3 +154,7 @@ button {
   margin: 5px;
   text-align: center;
 }
+
+/* Excellent CSS! I recommend using classes instead of ID's when styling elements. This will allow you to reuse styles
+ * across elements
+ * */
